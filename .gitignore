@@ -1,0 +1,12 @@
+.replit
+replit.nix
+.config/
+.upm/
+.cache/
+.pythonlibs/
+venv/
+__pycache__/
+*.pyc
+.DS_Store
+.env
+node_modules/
