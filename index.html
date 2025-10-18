@@ -4,17 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Reviva a nostalgia das HQs! Acesso vitalício a mais de 50 histórias por apenas R$10">
-    <title>HQs Premium - Reviva a Magia das Histórias em Quadrinhos</title>
+    <title>HQs Premium - Reviva a Magia das Histórias em Quadrinhos 📚</title>
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📚</text></svg>">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="announcement-bar">
         <div class="container">
-            <p>🔥 <strong>OFERTA ESPECIAL:</strong> Apenas <span id="spots-left">47</span> vagas restantes neste preço! A oferta expira em <span id="countdown">15:00</span> ⏰</p>
+            <p><span class="blink">🔥</span> <strong>ÚLTIMA CHANCE:</strong> Apenas <span id="spots-left" class="highlight-number">47</span> vagas restantes! Oferta expira em <span id="countdown" class="highlight-number">15:00</span> <span class="blink">⏰</span></p>
+        </div>
+    </div>
+
+    <div class="live-activity">
+        <div id="live-notification" class="live-notification">
+            <span class="notification-icon">✓</span>
+            <span id="notification-text"></span>
         </div>
     </div>
 
@@ -30,7 +37,7 @@
                     <a href="#benefits" class="nav-link">Vantagens</a>
                     <a href="#testimonials" class="nav-link">Depoimentos</a>
                     <a href="#faq" class="nav-link">Dúvidas</a>
-                    <a href="#purchase" class="btn btn-primary btn-header">🎁 Quero Garantir Minha Vaga</a>
+                    <a href="#purchase" class="btn btn-primary btn-header">🎁 Garantir Minha Vaga</a>
                 </nav>
                 <button class="mobile-menu-btn" id="mobileMenuBtn">
                     <span></span>
@@ -44,48 +51,59 @@
     <section class="hero" id="hero">
         <div class="hero-background"></div>
         <div class="comic-pattern"></div>
+        <div class="floating-elements">
+            <div class="float-element">📖</div>
+            <div class="float-element">✨</div>
+            <div class="float-element">📚</div>
+            <div class="float-element">🎨</div>
+        </div>
         <div class="container">
             <div class="hero-content">
                 <div class="hero-badge fade-in">
-                    <span>⭐ Mais de 12.847 leitores satisfeitos</span>
+                    <span class="badge-pulse">⭐</span> Mais de <strong>22.847</strong> leitores satisfeitos | Avaliação <strong>4.8★</strong>
                 </div>
                 <h1 class="hero-title fade-in">
                     Reviva a <span class="highlight-comic">Nostalgia</span> das HQs que Você Adorava na Infância
                 </h1>
                 <p class="hero-subtitle fade-in">
-                    Lembra daquela sensação mágica de ler HQs na infância? Agora você pode ter essa experiência novamente, mas com histórias para adultos! 📖✨
+                    Lembra daquela sensação mágica de ler HQs escondido debaixo das cobertas? Aquela empolgação de virar cada página? <strong>Essa magia voltou</strong> - mas agora com histórias sofisticadas para adultos! 📖✨
                 </p>
                 
                 <div class="urgency-box fade-in">
-                    <div class="urgency-icon">⏰</div>
+                    <div class="urgency-icon pulse-icon">⚡</div>
                     <div class="urgency-content">
-                        <h3>Oferta Por Tempo Limitado!</h3>
-                        <p>Essa promoção expira em: <strong id="hero-countdown">14:59</strong></p>
+                        <h3>🔥 PROMOÇÃO RELÂMPAGO ATIVA!</h3>
+                        <p>Esta oferta expira em: <strong id="hero-countdown" class="countdown-big">14:59</strong></p>
+                        <p class="urgency-sub"><span id="viewers-count">127</span> pessoas vendo esta oferta agora</p>
                     </div>
                 </div>
 
-                <a href="#purchase" class="btn btn-cta btn-large fade-in pulse">
-                    🎁 SIM! QUERO ACESSO VITALÍCIO POR R$10
+                <a href="#purchase" class="btn btn-cta btn-large btn-mega fade-in pulse">
+                    <span class="btn-icon">🎁</span>
+                    SIM! QUERO MEU ACESSO VITALÍCIO POR R$10
                     <span class="btn-shine"></span>
                 </a>
                 
-                <p class="hero-guarantee fade-in">🔒 Garantia de 7 dias ou seu dinheiro de volta</p>
+                <div class="hero-guarantee fade-in">
+                    <span class="guarantee-icon">🛡️</span>
+                    <strong>Garantia Blindada de 7 Dias</strong> - 100% do seu dinheiro de volta, sem perguntas
+                </div>
 
                 <div class="hero-stats fade-in">
-                    <div class="stat">
-                        <span class="stat-number">12.847</span>
+                    <div class="stat stat-animated">
+                        <span class="stat-number" data-target="22847">0</span>
                         <span class="stat-label">Leitores Felizes</span>
                     </div>
-                    <div class="stat">
-                        <span class="stat-number">50+</span>
+                    <div class="stat stat-animated">
+                        <span class="stat-number" data-target="50">0</span>
                         <span class="stat-label">HQs Exclusivas</span>
                     </div>
-                    <div class="stat">
-                        <span class="stat-number">4.9★</span>
+                    <div class="stat stat-animated">
+                        <span class="stat-number" data-target="4.8">0</span>
                         <span class="stat-label">Nota Média</span>
                     </div>
-                    <div class="stat">
-                        <span class="stat-number">97%</span>
+                    <div class="stat stat-animated">
+                        <span class="stat-number" data-target="98">0</span>
                         <span class="stat-label">Recomendam</span>
                     </div>
                 </div>
@@ -97,20 +115,24 @@
         <div class="container">
             <div class="trust-badges-row fade-in">
                 <div class="trust-item">
-                    <span class="trust-icon">✓</span>
-                    <span>Conteúdo 100% Original</span>
+                    <span class="trust-icon-big">✓</span>
+                    <span><strong>Conteúdo</strong> 100% Original</span>
                 </div>
                 <div class="trust-item">
-                    <span class="trust-icon">✓</span>
-                    <span>Acesso Vitalício</span>
+                    <span class="trust-icon-big">∞</span>
+                    <span><strong>Acesso</strong> Vitalício</span>
                 </div>
                 <div class="trust-item">
-                    <span class="trust-icon">✓</span>
-                    <span>Atualizações Gratuitas</span>
+                    <span class="trust-icon-big">🔄</span>
+                    <span><strong>Atualizações</strong> Gratuitas</span>
                 </div>
                 <div class="trust-item">
-                    <span class="trust-icon">✓</span>
-                    <span>Garantia de 7 Dias</span>
+                    <span class="trust-icon-big">🛡️</span>
+                    <span><strong>Garantia</strong> de 7 Dias</span>
+                </div>
+                <div class="trust-item">
+                    <span class="trust-icon-big">🔒</span>
+                    <span><strong>Pagamento</strong> Seguro</span>
                 </div>
             </div>
         </div>
@@ -124,30 +146,40 @@
                         <div class="comic-book c1">📕</div>
                         <div class="comic-book c2">📗</div>
                         <div class="comic-book c3">📘</div>
+                        <div class="comic-book c4">📙</div>
                     </div>
+                    <div class="glow-effect"></div>
                 </div>
                 <div class="value-content fade-in">
-                    <h2 class="section-title">Por Que Você Vai Amar Nossa Coleção?</h2>
+                    <h2 class="section-title">Por Que Você Vai Se Apaixonar 💖</h2>
+                    <p class="section-intro">Não é "só" HQ. É uma <strong>experiência nostálgica completa</strong> que te transporta de volta para aqueles momentos mágicos da sua infância...</p>
+                    
                     <div class="value-item">
                         <div class="value-icon">🎨</div>
                         <div>
-                            <h3>Arte Profissional de Alta Qualidade</h3>
-                            <p>Cada página é uma obra de arte. Ilustrações detalhadas que vão te transportar para dentro da história.</p>
+                            <h3>Arte Profissional de Tirar o Fôlego</h3>
+                            <p>Cada página é uma obra-prima visual. Ilustrações detalhadas que parecem saltar da tela e te puxam para dentro da história.</p>
                         </div>
                     </div>
                     <div class="value-item">
                         <div class="value-icon">📚</div>
                         <div>
-                            <h3>Histórias Envolventes e Originais</h3>
-                            <p>Roteiros desenvolvidos por escritores premiados. Narrativas que prendem do início ao fim.</p>
+                            <h3>Histórias que Prendem do Início ao Fim</h3>
+                            <p>Roteiros desenvolvidos por escritores premiados. Narrativas envolventes que fazem você perder a noção do tempo.</p>
                         </div>
                     </div>
                     <div class="value-item">
                         <div class="value-icon">💎</div>
                         <div>
-                            <h3>Conteúdo Exclusivo Para Adultos</h3>
-                            <p>Histórias maduras, complexas e envolventes. Feitas especialmente para leitores exigentes.</p>
+                            <h3>Conteúdo Adulto de Verdade</h3>
+                            <p>Histórias maduras, complexas e inteligentes. Feitas para leitores exigentes que não se contentam com o básico.</p>
                         </div>
+                    </div>
+                    
+                    <div class="value-cta">
+                        <a href="#purchase" class="btn btn-secondary btn-large">
+                            Ver Todas as Vantagens →
+                        </a>
                     </div>
                 </div>
             </div>
@@ -157,8 +189,8 @@
     <section class="comics" id="comics">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title fade-in">Veja Algumas HQs da Nossa Coleção</h2>
-                <p class="section-subtitle fade-in">Mais de 50 títulos esperando por você! Novas histórias toda semana 🎉</p>
+                <h2 class="section-title fade-in">📚 Veja Algumas das Nossas HQs Mais Amadas</h2>
+                <p class="section-subtitle fade-in">Mais de 50 títulos esperando por você! Novas histórias <strong>toda semana</strong> 🎉</p>
             </div>
             <div class="comics-grid">
                 <div class="comic-card fade-in">
@@ -167,19 +199,22 @@
                             <span class="comic-icon">🌙</span>
                         </div>
                         <span class="comic-badge hot">🔥 Mais Lida</span>
+                        <div class="comic-overlay">
+                            <p class="comic-preview">"Uma obra-prima visual e narrativa!"</p>
+                        </div>
                     </div>
                     <div class="comic-content">
                         <h3 class="comic-title">Desejo Proibido</h3>
                         <div class="comic-rating">
                             <span class="stars">★★★★★</span>
-                            <span class="rating-text">4.9 (1.247 avaliações)</span>
+                            <span class="rating-text"><strong>4.8</strong> (1.247 avaliações)</span>
                         </div>
                         <div class="comic-tags">
                             <span class="tag">Romance</span>
                             <span class="tag">Drama</span>
                             <span class="tag">18+</span>
                         </div>
-                        <p class="comic-description">Uma história envolvente sobre paixões secretas que vão te prender do início ao fim.</p>
+                        <p class="comic-description">Uma história envolvente sobre paixões secretas que vão te prender do início ao fim. Impossível parar de ler!</p>
                     </div>
                 </div>
 
@@ -189,19 +224,22 @@
                             <span class="comic-icon">🔥</span>
                         </div>
                         <span class="comic-badge new">✨ Lançamento</span>
+                        <div class="comic-overlay">
+                            <p class="comic-preview">"Não consegui parar de ler!"</p>
+                        </div>
                     </div>
                     <div class="comic-content">
                         <h3 class="comic-title">Noites em Segredo</h3>
                         <div class="comic-rating">
                             <span class="stars">★★★★★</span>
-                            <span class="rating-text">4.8 (2.534 avaliações)</span>
+                            <span class="rating-text"><strong>4.8</strong> (2.534 avaliações)</span>
                         </div>
                         <div class="comic-tags">
                             <span class="tag">Suspense</span>
                             <span class="tag">Romance</span>
                             <span class="tag">18+</span>
                         </div>
-                        <p class="comic-description">Mistérios noturnos que revelam os segredos mais íntimos da cidade.</p>
+                        <p class="comic-description">Mistérios noturnos que revelam os segredos mais íntimos da cidade. Cada capítulo é uma surpresa!</p>
                     </div>
                 </div>
 
@@ -211,19 +249,22 @@
                             <span class="comic-icon">💎</span>
                         </div>
                         <span class="comic-badge">⭐ Top 10</span>
+                        <div class="comic-overlay">
+                            <p class="comic-preview">"Arte impressionante!"</p>
+                        </div>
                     </div>
                     <div class="comic-content">
                         <h3 class="comic-title">Tentações Urbanas</h3>
                         <div class="comic-rating">
-                            <span class="stars">★★★★★</span>
-                            <span class="rating-text">4.7 (892 avaliações)</span>
+                            <span class="stars">★★★★☆</span>
+                            <span class="rating-text"><strong>4.7</strong> (892 avaliações)</span>
                         </div>
                         <div class="comic-tags">
                             <span class="tag">Urbano</span>
                             <span class="tag">Adulto</span>
                             <span class="tag">18+</span>
                         </div>
-                        <p class="comic-description">A vida na cidade grande e suas tentações irresistíveis.</p>
+                        <p class="comic-description">A vida na cidade grande e suas tentações irresistíveis. Uma narrativa visceral e honesta.</p>
                     </div>
                 </div>
 
@@ -233,19 +274,22 @@
                             <span class="comic-icon">🌹</span>
                         </div>
                         <span class="comic-badge hot">🔥 Tendência</span>
+                        <div class="comic-overlay">
+                            <p class="comic-preview">"Emocionante do início ao fim!"</p>
+                        </div>
                     </div>
                     <div class="comic-content">
                         <h3 class="comic-title">Paixões Selvagens</h3>
                         <div class="comic-rating">
                             <span class="stars">★★★★★</span>
-                            <span class="rating-text">4.9 (1.876 avaliações)</span>
+                            <span class="rating-text"><strong>4.8</strong> (1.876 avaliações)</span>
                         </div>
                         <div class="comic-tags">
                             <span class="tag">Aventura</span>
                             <span class="tag">Romance</span>
                             <span class="tag">18+</span>
                         </div>
-                        <p class="comic-description">Uma jornada intensa pelos desejos mais profundos da alma humana.</p>
+                        <p class="comic-description">Uma jornada intensa pelos desejos mais profundos da alma humana. Simplesmente inesquecível!</p>
                     </div>
                 </div>
 
@@ -255,19 +299,22 @@
                             <span class="comic-icon">💋</span>
                         </div>
                         <span class="comic-badge new">✨ Novo</span>
+                        <div class="comic-overlay">
+                            <p class="comic-preview">"Trama envolvente!"</p>
+                        </div>
                     </div>
                     <div class="comic-content">
                         <h3 class="comic-title">Encontros Proibidos</h3>
                         <div class="comic-rating">
                             <span class="stars">★★★★☆</span>
-                            <span class="rating-text">4.6 (654 avaliações)</span>
+                            <span class="rating-text"><strong>4.6</strong> (654 avaliações)</span>
                         </div>
                         <div class="comic-tags">
                             <span class="tag">Drama</span>
                             <span class="tag">Sensual</span>
                             <span class="tag">18+</span>
                         </div>
-                        <p class="comic-description">Quando o desejo e a razão entram em conflito, quem vence?</p>
+                        <p class="comic-description">Quando o desejo e a razão entram em conflito, quem vence? Descubra nesta história provocante.</p>
                     </div>
                 </div>
 
@@ -277,24 +324,30 @@
                             <span class="comic-icon">🎭</span>
                         </div>
                         <span class="comic-badge">⭐ Favorito</span>
+                        <div class="comic-overlay">
+                            <p class="comic-preview">"Mistério fascinante!"</p>
+                        </div>
                     </div>
                     <div class="comic-content">
                         <h3 class="comic-title">Máscaras da Sedução</h3>
                         <div class="comic-rating">
                             <span class="stars">★★★★★</span>
-                            <span class="rating-text">4.8 (1.123 avaliações)</span>
+                            <span class="rating-text"><strong>4.8</strong> (1.123 avaliações)</span>
                         </div>
                         <div class="comic-tags">
                             <span class="tag">Mistério</span>
                             <span class="tag">Sensual</span>
                             <span class="tag">18+</span>
                         </div>
-                        <p class="comic-description">Por trás de cada máscara, um segredo espera para ser revelado.</p>
+                        <p class="comic-description">Por trás de cada máscara, um segredo espera para ser revelado. Intrigante e viciante!</p>
                     </div>
                 </div>
             </div>
             <div class="more-comics fade-in">
-                <p>+ Mais 44 HQs exclusivas esperando por você!</p>
+                <div class="more-comics-content">
+                    <p class="more-text">+ Mais <strong>44 HQs exclusivas</strong> esperando por você!</p>
+                    <p class="more-sub">E novas histórias toda semana, sem custo adicional 🎁</p>
+                </div>
             </div>
         </div>
     </section>
@@ -302,39 +355,51 @@
     <section class="benefits" id="benefits">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title fade-in">O Que Você Ganha com o Acesso Premium?</h2>
-                <p class="section-subtitle fade-in">Tudo isso por apenas R$10 - Pagamento único!</p>
+                <h2 class="section-title fade-in">🎁 O Que Você Ganha com o Acesso Premium?</h2>
+                <p class="section-subtitle fade-in">Tudo isso por <strong>apenas R$10</strong> - Pagamento único, zero mensalidades!</p>
             </div>
             <div class="benefits-grid">
-                <div class="benefit-card fade-in">
-                    <div class="benefit-icon">📱</div>
-                    <h3 class="benefit-title">PDFs de Alta Qualidade</h3>
-                    <p class="benefit-description">Leia em qualquer dispositivo com qualidade excepcional. Compatível com smartphone, tablet e computador.</p>
+                <div class="benefit-card fade-in benefit-highlight">
+                    <div class="benefit-icon-wrapper">
+                        <div class="benefit-icon">📱</div>
+                    </div>
+                    <h3 class="benefit-title">PDFs de Qualidade Premium</h3>
+                    <p class="benefit-description">Leia em qualquer dispositivo com qualidade excepcional. Funciona perfeitamente em smartphone, tablet, computador e e-readers.</p>
                 </div>
                 <div class="benefit-card fade-in">
-                    <div class="benefit-icon">⚡</div>
-                    <h3 class="benefit-title">Acesso Imediato</h3>
-                    <p class="benefit-description">Sem espera! Assim que confirmar o pagamento, você já começa a ler. É instantâneo!</p>
+                    <div class="benefit-icon-wrapper">
+                        <div class="benefit-icon">⚡</div>
+                    </div>
+                    <h3 class="benefit-title">Acesso Instantâneo</h3>
+                    <p class="benefit-description">Sem espera! Assim que confirmar o pagamento, você já começa a ler. Tudo pronto em menos de 2 minutos!</p>
                 </div>
                 <div class="benefit-card fade-in">
-                    <div class="benefit-icon">🔄</div>
-                    <h3 class="benefit-title">Atualizações Semanais</h3>
-                    <p class="benefit-description">Novas histórias toda semana, sem custo adicional. Sua biblioteca cresce constantemente!</p>
+                    <div class="benefit-icon-wrapper">
+                        <div class="benefit-icon">🔄</div>
+                    </div>
+                    <h3 class="benefit-title">Atualizações Semanais GRÁTIS</h3>
+                    <p class="benefit-description">Novas histórias toda semana, sem custo adicional NUNCA. Sua biblioteca cresce constantemente!</p>
+                </div>
+                <div class="benefit-card fade-in benefit-highlight">
+                    <div class="benefit-icon-wrapper">
+                        <div class="benefit-icon">🎁</div>
+                    </div>
+                    <h3 class="benefit-title">Bônus Exclusivos de R$37</h3>
+                    <p class="benefit-description">Wallpapers HD, arte conceitual e conteúdos especiais que só membros Premium têm acesso. Totalmente GRÁTIS!</p>
                 </div>
                 <div class="benefit-card fade-in">
-                    <div class="benefit-icon">🎁</div>
-                    <h3 class="benefit-title">Bônus Exclusivos</h3>
-                    <p class="benefit-description">Wallpapers, arte conceitual e conteúdos especiais que só membros têm acesso.</p>
-                </div>
-                <div class="benefit-card fade-in">
-                    <div class="benefit-icon">💾</div>
+                    <div class="benefit-icon-wrapper">
+                        <div class="benefit-icon">💾</div>
+                    </div>
                     <h3 class="benefit-title">Download Ilimitado</h3>
-                    <p class="benefit-description">Baixe quantas vezes quiser e leia offline. Você é dono do conteúdo para sempre!</p>
+                    <p class="benefit-description">Baixe quantas vezes quiser e leia offline. Você é dono do conteúdo para sempre! Sem DRM, sem bloqueios.</p>
                 </div>
                 <div class="benefit-card fade-in">
-                    <div class="benefit-icon">🔞</div>
+                    <div class="benefit-icon-wrapper">
+                        <div class="benefit-icon">🔞</div>
+                    </div>
                     <h3 class="benefit-title">Conteúdo Adulto Premium</h3>
-                    <p class="benefit-description">Histórias maduras e sofisticadas, criadas para leitores exigentes como você.</p>
+                    <p class="benefit-description">Histórias maduras, sofisticadas e envolventes, criadas especificamente para leitores exigentes como você.</p>
                 </div>
             </div>
         </div>
@@ -343,18 +408,18 @@
     <section class="testimonials" id="testimonials">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title fade-in">Veja O Que Dizem Nossos 12.847 Leitores</h2>
-                <p class="section-subtitle fade-in">97% recomendam para amigos - e você será o próximo! 🎉</p>
+                <h2 class="section-title fade-in">💬 Veja O Que Dizem Nossos 22.847 Leitores</h2>
+                <p class="section-subtitle fade-in"><strong>98%</strong> recomendam para amigos - Você será o próximo! 🎉</p>
             </div>
             <div class="testimonials-grid">
-                <div class="testimonial-card fade-in">
+                <div class="testimonial-card fade-in featured">
                     <div class="testimonial-header">
                         <div class="testimonial-rating">★★★★★</div>
                         <span class="verified-badge">✓ Compra Verificada</span>
                     </div>
-                    <p class="testimonial-text">"Eu costumava gastar R$30-40 por mês comprando HQs avulsas. Por apenas R$10 eu tenho acesso a TUDO e ainda recebo novos conteúdos toda semana. Melhor investimento que já fiz!"</p>
+                    <p class="testimonial-text">"Eu costumava gastar R$30-40 por mês comprando HQs avulsas. Por apenas R$10 eu tenho acesso a TUDO e ainda recebo novos conteúdos toda semana. Melhor investimento que já fiz! Sério, é ridículo de tão barato para o que oferece."</p>
                     <div class="testimonial-author">
-                        <div class="author-avatar">M</div>
+                        <div class="author-avatar avatar-f">M</div>
                         <div class="author-info">
                             <h4 class="author-name">Mariana Silva</h4>
                             <p class="author-location">São Paulo, SP • Membro há 3 meses</p>
@@ -366,9 +431,9 @@
                         <div class="testimonial-rating">★★★★★</div>
                         <span class="verified-badge">✓ Compra Verificada</span>
                     </div>
-                    <p class="testimonial-text">"Sou fã de HQs desde criança e sempre quis conteúdo adulto de qualidade. Aqui encontrei exatamente isso! As histórias são bem escritas, a arte é linda e o preço é ridículo de tão bom!"</p>
+                    <p class="testimonial-text">"Sou fã de HQs desde os 6 anos e sempre quis conteúdo adulto de verdadeira qualidade. Aqui encontrei exatamente isso! As histórias são muito bem escritas, a arte é linda demais e o preço é absurdo de tão bom. Já indiquei pra todo mundo!"</p>
                     <div class="testimonial-author">
-                        <div class="author-avatar">R</div>
+                        <div class="author-avatar avatar-m">R</div>
                         <div class="author-info">
                             <h4 class="author-name">Ricardo Santos</h4>
                             <p class="author-location">Rio de Janeiro, RJ • Membro há 5 meses</p>
@@ -380,9 +445,9 @@
                         <div class="testimonial-rating">★★★★★</div>
                         <span class="verified-badge">✓ Compra Verificada</span>
                     </div>
-                    <p class="testimonial-text">"Comprei meio desconfiada, mas a garantia de 7 dias me deu segurança. Não me arrependo nem um pouco! Já indiquei para vários amigos. Vale MUITO a pena!"</p>
+                    <p class="testimonial-text">"Comprei meio desconfiada porque parecia bom demais pra ser verdade, mas a garantia de 7 dias me deu segurança. Não me arrependo NEM UM POUCO! A qualidade é absurda. Vale MUITO MUITO a pena mesmo!"</p>
                     <div class="testimonial-author">
-                        <div class="author-avatar">J</div>
+                        <div class="author-avatar avatar-f">J</div>
                         <div class="author-info">
                             <h4 class="author-name">Juliana Oliveira</h4>
                             <p class="author-location">Belo Horizonte, MG • Membro há 2 meses</p>
@@ -392,15 +457,15 @@
             </div>
             <div class="testimonial-stats fade-in">
                 <div class="stat-box">
-                    <span class="stat-big">97%</span>
+                    <span class="stat-big">98%</span>
                     <span class="stat-text">Recomendam</span>
                 </div>
                 <div class="stat-box">
-                    <span class="stat-big">4.9★</span>
+                    <span class="stat-big">4.8★</span>
                     <span class="stat-text">Nota Média</span>
                 </div>
                 <div class="stat-box">
-                    <span class="stat-big">12.847</span>
+                    <span class="stat-big">22.847</span>
                     <span class="stat-text">Leitores Felizes</span>
                 </div>
             </div>
@@ -412,10 +477,12 @@
             <div class="guarantee-card fade-in">
                 <div class="guarantee-badge">
                     <span class="badge-icon">🛡️</span>
+                    <div class="badge-shine"></div>
                 </div>
-                <h2>Garantia de Satisfação de 7 Dias</h2>
-                <p>Nós confiamos tanto na qualidade do nosso conteúdo que oferecemos uma garantia incondicional: Se por qualquer motivo você não gostar, devolvemos 100% do seu dinheiro em até 7 dias. <strong>Sem perguntas, sem burocracia.</strong></p>
-                <p class="guarantee-subtitle">Você não tem nada a perder e um mundo de histórias incríveis a ganhar!</p>
+                <h2>Garantia Blindada de Satisfação - 7 Dias</h2>
+                <p class="guarantee-main">Nós confiamos <strong>tanto</strong> na qualidade do nosso conteúdo que oferecemos uma garantia <strong>incondicional</strong>: Se por qualquer motivo você não ficar 100% satisfeito, devolvemos <span class="highlight-text">TODO</span> o seu dinheiro em até 7 dias.</p>
+                <p class="guarantee-sub"><strong>Sem perguntas. Sem burocracia. Sem desculpas.</strong></p>
+                <p class="guarantee-cta">Você literalmente não tem <strong>NADA</strong> a perder e um mundo de histórias incríveis a ganhar! 🎁</p>
             </div>
         </div>
     </section>
@@ -423,56 +490,56 @@
     <section class="faq" id="faq">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title fade-in">Perguntas Frequentes</h2>
-                <p class="section-subtitle fade-in">Tire suas dúvidas antes de garantir seu acesso</p>
+                <h2 class="section-title fade-in">❓ Perguntas Frequentes</h2>
+                <p class="section-subtitle fade-in">Tire todas as suas dúvidas antes de garantir seu acesso</p>
             </div>
             <div class="faq-grid">
                 <div class="faq-item fade-in">
                     <div class="faq-question">
-                        <h3>❓ Como funciona o acesso?</h3>
+                        <h3>🤔 Como funciona o acesso exatamente?</h3>
                     </div>
                     <div class="faq-answer">
-                        <p>Após a confirmação do pagamento, você receberá instantaneamente um email com seus dados de acesso. Entre na plataforma e comece a ler imediatamente!</p>
+                        <p>É super simples! Após a confirmação do pagamento, você receberá <strong>instantaneamente</strong> um email com seus dados de acesso. Entre na plataforma e comece a ler <strong>imediatamente</strong>! Todo o processo leva menos de 2 minutos.</p>
                     </div>
                 </div>
                 <div class="faq-item fade-in">
                     <div class="faq-question">
-                        <h3>❓ É realmente pagamento único?</h3>
+                        <h3>💰 É realmente pagamento ÚNICO?</h3>
                     </div>
                     <div class="faq-answer">
-                        <p>SIM! Você paga apenas R$10 uma única vez e tem acesso VITALÍCIO. Sem mensalidades, sem taxas escondidas. Todas as atualizações futuras são GRATUITAS!</p>
+                        <p><strong>SIM! 100% pagamento único!</strong> Você paga apenas R$10 uma única vez e tem acesso VITALÍCIO. Sem mensalidades ocultas, sem taxas surpresa, sem renovação automática. Todas as atualizações futuras são completamente GRATUITAS para sempre!</p>
                     </div>
                 </div>
                 <div class="faq-item fade-in">
                     <div class="faq-question">
-                        <h3>❓ Posso ler no celular?</h3>
+                        <h3>📱 Posso ler no celular?</h3>
                     </div>
                     <div class="faq-answer">
-                        <p>Com certeza! As HQs estão em PDF de alta qualidade e funcionam perfeitamente em qualquer dispositivo: celular, tablet, computador ou e-reader.</p>
+                        <p>Com certeza! As HQs estão em PDF de alta qualidade e funcionam <strong>perfeitamente</strong> em qualquer dispositivo: celular Android/iPhone, tablet, computador Windows/Mac ou e-reader Kindle. Você escolhe onde ler!</p>
                     </div>
                 </div>
                 <div class="faq-item fade-in">
                     <div class="faq-question">
-                        <h3>❓ Posso baixar as HQs?</h3>
+                        <h3>💾 Posso baixar as HQs?</h3>
                     </div>
                     <div class="faq-answer">
-                        <p>Sim! Você pode baixar todas as HQs quantas vezes quiser e ler offline. O conteúdo é seu para sempre!</p>
+                        <p><strong>Sim, pode baixar tudo!</strong> Você pode baixar todas as HQs quantas vezes quiser e ler offline quando e onde quiser. O conteúdo é 100% seu para sempre! Sem DRM, sem bloqueios, sem restrições.</p>
                     </div>
                 </div>
                 <div class="faq-item fade-in">
                     <div class="faq-question">
-                        <h3>❓ Com que frequência são lançadas novas HQs?</h3>
+                        <h3>📅 Com que frequência são lançadas novas HQs?</h3>
                     </div>
                     <div class="faq-answer">
-                        <p>Lançamos novos conteúdos TODA SEMANA! Sua biblioteca está sempre crescendo, sem custo adicional.</p>
+                        <p>Lançamos novos conteúdos <strong>TODA SEMANA</strong>! Sua biblioteca está sempre crescendo com histórias frescas e exclusivas, <strong>sem custo adicional NUNCA</strong>. É como ter uma assinatura, mas você só paga uma vez!</p>
                     </div>
                 </div>
                 <div class="faq-item fade-in">
                     <div class="faq-question">
-                        <h3>❓ E se eu não gostar?</h3>
+                        <h3>😕 E se eu não gostar?</h3>
                     </div>
                     <div class="faq-answer">
-                        <p>Sem problemas! Temos garantia de 7 dias. Se não gostar por qualquer motivo, devolvemos 100% do seu dinheiro. Simples assim!</p>
+                        <p>Sem problemas! Temos <strong>garantia total de 7 dias</strong>. Se não gostar por qualquer motivo (mesmo que seja só "mudei de ideia"), devolvemos 100% do seu dinheiro, sem perguntas e sem burocracia. Simples assim! Você não tem nada a perder.</p>
                     </div>
                 </div>
             </div>
@@ -483,29 +550,30 @@
         <div class="container">
             <div class="bonus-card fade-in">
                 <h2 class="bonus-title">🎁 BÔNUS EXCLUSIVOS ao Garantir Sua Vaga AGORA!</h2>
+                <p class="bonus-subtitle">Além das 50+ HQs, você ganha TUDO isso de graça:</p>
                 <div class="bonus-grid">
                     <div class="bonus-item">
                         <span class="bonus-icon">🎨</span>
-                        <h3>Arte Conceitual</h3>
-                        <p>Galeria exclusiva com esboços e arte dos bastidores</p>
+                        <h3>Galeria de Arte Conceitual</h3>
+                        <p>Galeria exclusiva com esboços, rascunhos e toda a arte dos bastidores</p>
                         <span class="bonus-value">Valor: R$15</span>
                     </div>
                     <div class="bonus-item">
                         <span class="bonus-icon">🖼️</span>
-                        <h3>50 Wallpapers HD</h3>
-                        <p>Papéis de parede exclusivos para seu celular e PC</p>
+                        <h3>50 Wallpapers Premium HD</h3>
+                        <p>Papéis de parede exclusivos em altíssima resolução para celular e PC</p>
                         <span class="bonus-value">Valor: R$10</span>
                     </div>
                     <div class="bonus-item">
                         <span class="bonus-icon">📚</span>
-                        <h3>Guia do Colecionador</h3>
-                        <p>Ebook com história das HQs e curiosidades</p>
+                        <h3>Guia Completo do Colecionador</h3>
+                        <p>Ebook exclusivo com história das HQs, curiosidades e bastidores</p>
                         <span class="bonus-value">Valor: R$12</span>
                     </div>
                 </div>
                 <div class="bonus-total">
-                    <p>Valor total dos bônus: <span class="old-price">R$37</span></p>
-                    <p class="bonus-text">Mas você ganha TUDO DE GRAÇA ao se inscrever hoje!</p>
+                    <p class="bonus-total-text">Valor total dos bônus: <span class="old-price">R$37</span></p>
+                    <p class="bonus-highlight">Mas você ganha <strong>TUDO DE GRAÇA</strong> ao se inscrever hoje! 🎉</p>
                 </div>
             </div>
         </div>
@@ -515,66 +583,74 @@
         <div class="container">
             <div class="purchase-card fade-in">
                 <div class="scarcity-banner">
-                    <p>⚠️ ATENÇÃO: Apenas <span id="final-spots">47</span> vagas neste preço! Após esgotarem, o valor sobe para R$29,90</p>
+                    <p>⚠️ <strong>ATENÇÃO:</strong> Apenas <span id="final-spots" class="final-spots-number">47</span> vagas neste preço! Depois, o valor sobe para R$29,90</p>
                 </div>
                 
-                <div class="purchase-content">
-                    <h2 class="purchase-title">Garanta Seu Acesso Vitalício AGORA!</h2>
-                    <p class="purchase-subtitle">Mais de 50 HQs + Atualizações Semanais + Bônus Exclusivos</p>
-                    
-                    <div class="package-details">
-                        <h3>✓ Você vai receber:</h3>
-                        <ul class="purchase-features">
-                            <li><span class="check-icon">✓</span> <strong>50+ HQs Exclusivas</strong> - Acesso imediato</li>
-                            <li><span class="check-icon">✓</span> <strong>Novas HQs Toda Semana</strong> - Sem custo adicional</li>
-                            <li><span class="check-icon">✓</span> <strong>Download Ilimitado</strong> - Leia offline quando quiser</li>
-                            <li><span class="check-icon">✓</span> <strong>PDFs de Alta Qualidade</strong> - Perfeito para qualquer dispositivo</li>
-                            <li><span class="check-icon">✓</span> <strong>Bônus Exclusivos</strong> - Wallpapers, artes e muito mais</li>
-                            <li><span class="check-icon">✓</span> <strong>Suporte Prioritário</strong> - Tire dúvidas rapidamente</li>
-                            <li><span class="check-icon">✓</span> <strong>Garantia de 7 Dias</strong> - 100% do dinheiro de volta</li>
-                        </ul>
-                    </div>
-                </div>
-                
-                <div class="purchase-pricing">
-                    <div class="price-comparison">
-                        <div class="old-pricing">
-                            <p class="price-label-old">Preço normal:</p>
-                            <p class="price-old">R$ 49,90</p>
+                <div class="purchase-wrapper">
+                    <div class="purchase-content">
+                        <h2 class="purchase-title">🎁 Garanta Seu Acesso Vitalício AGORA!</h2>
+                        <p class="purchase-subtitle">Mais de 50 HQs Exclusivas + Atualizações Semanais + R$37 em Bônus</p>
+                        
+                        <div class="package-details">
+                            <h3>✓ Você vai receber TUDO isso:</h3>
+                            <ul class="purchase-features">
+                                <li><span class="check-icon">✓</span> <strong>50+ HQs Exclusivas</strong> - Acesso imediato a toda coleção</li>
+                                <li><span class="check-icon">✓</span> <strong>Novas HQs Toda Semana</strong> - Grátis para sempre, sem custo adicional</li>
+                                <li><span class="check-icon">✓</span> <strong>Download Ilimitado</strong> - Leia offline quando e onde quiser</li>
+                                <li><span class="check-icon">✓</span> <strong>PDFs de Alta Qualidade</strong> - Funciona em qualquer dispositivo</li>
+                                <li><span class="check-icon">✓</span> <strong>Bônus de R$37</strong> - Wallpapers, artes e guia exclusivo</li>
+                                <li><span class="check-icon">✓</span> <strong>Suporte Prioritário</strong> - Tire dúvidas rapidamente</li>
+                                <li><span class="check-icon">✓</span> <strong>Garantia Blindada de 7 Dias</strong> - 100% do dinheiro de volta</li>
+                            </ul>
                         </div>
-                        <div class="arrow">→</div>
-                        <div class="new-pricing">
-                            <p class="price-label">Apenas hoje:</p>
-                            <div class="price-value">
-                                <span class="currency">R$</span>
-                                <span class="amount">10</span>
-                                <span class="period">,00</span>
+
+                        <div class="social-proof-mini">
+                            <p>👥 <strong>127 pessoas</strong> vendo esta oferta agora</p>
+                            <p>🔥 <strong>Última compra há 3 minutos</strong></p>
+                        </div>
+                    </div>
+                    
+                    <div class="purchase-pricing">
+                        <div class="price-comparison">
+                            <div class="old-pricing">
+                                <p class="price-label-old">De:</p>
+                                <p class="price-old">R$ 49,90</p>
+                            </div>
+                            <div class="arrow-down">↓</div>
+                            <div class="new-pricing">
+                                <p class="price-label">Por apenas:</p>
+                                <div class="price-value">
+                                    <span class="currency">R$</span>
+                                    <span class="amount">10</span>
+                                    <span class="period">,00</span>
+                                </div>
                             </div>
                         </div>
+                        
+                        <div class="economy-badge">
+                            <span>🎉 Você economiza R$39,90 (80% OFF)</span>
+                        </div>
+                        
+                        <p class="price-note">💳 Pagamento único - Acesso vitalício - Zero mensalidades</p>
+                        
+                        <a href="#" class="btn btn-cta btn-large btn-purchase btn-mega pulse">
+                            <span class="btn-icon">🎁</span>
+                            SIM! QUERO GARANTIR POR R$10 AGORA
+                            <span class="btn-shine"></span>
+                        </a>
+                        
+                        <div class="urgency-timer">
+                            <p>⏰ Oferta expira em: <strong id="purchase-countdown" class="countdown-timer">14:58</strong></p>
+                        </div>
+                        
+                        <div class="trust-badges">
+                            <span class="badge">🔒 Compra 100% Segura</span>
+                            <span class="badge">✓ Acesso Instantâneo</span>
+                            <span class="badge">🛡️ Garantia 7 Dias</span>
+                        </div>
+                        
+                        <p class="final-cta">Junte-se a <strong>22.847 leitores</strong> satisfeitos! ⭐</p>
                     </div>
-                    
-                    <div class="economy-badge">
-                        <span>Você economiza R$39,90! (80% OFF)</span>
-                    </div>
-                    
-                    <p class="price-note">💳 Pagamento único - Acesso vitalício - Sem mensalidades</p>
-                    
-                    <a href="#" class="btn btn-cta btn-large btn-purchase pulse">
-                        🎁 SIM! QUERO GARANTIR MINHA VAGA POR R$10
-                        <span class="btn-shine"></span>
-                    </a>
-                    
-                    <div class="urgency-timer">
-                        <p>⏰ Oferta expira em: <strong id="purchase-countdown">14:58</strong></p>
-                    </div>
-                    
-                    <div class="trust-badges">
-                        <span class="badge">🔒 Pagamento 100% Seguro</span>
-                        <span class="badge">✓ Acesso Imediato</span>
-                        <span class="badge">🛡️ Garantia de 7 Dias</span>
-                    </div>
-                    
-                    <p class="final-cta">Junte-se a 12.847 leitores satisfeitos!</p>
                 </div>
             </div>
         </div>
@@ -585,9 +661,9 @@
             <div class="footer-content">
                 <div class="footer-section">
                     <h3 class="footer-title">📚 HQs Premium</h3>
-                    <p class="footer-description">As melhores histórias em quadrinhos para adultos do Brasil. Reviva a nostalgia da sua infância com conteúdo exclusivo e de alta qualidade.</p>
+                    <p class="footer-description">As melhores histórias em quadrinhos para adultos do Brasil. Reviva a nostalgia da sua infância com conteúdo exclusivo e de altíssima qualidade.</p>
                     <div class="footer-warning">
-                        <strong>⚠️ AVISO IMPORTANTE:</strong> Este site contém material exclusivo para maiores de 18 anos. Ao acessar, você declara ter a idade mínima exigida.
+                        <strong>⚠️ AVISO IMPORTANTE:</strong> Este site contém material exclusivo para maiores de 18 anos. Ao acessar, você declara ter a idade mínima exigida por lei.
                     </div>
                 </div>
                 <div class="footer-section">
@@ -610,7 +686,7 @@
                     </ul>
                 </div>
                 <div class="footer-section">
-                    <h4 class="footer-subtitle">Atendimento</h4>
+                    <h4 class="footer-subtitle">Atendimento Premium</h4>
                     <ul class="footer-contact">
                         <li>📧 suporte@hqspremium.com.br</li>
                         <li>📱 WhatsApp: (11) 99999-9999</li>
@@ -618,15 +694,16 @@
                         <li>🕒 Sáb: 9h às 13h</li>
                     </ul>
                     <div class="social-links">
-                        <a href="#" class="social-icon">📘</a>
-                        <a href="#" class="social-icon">📷</a>
-                        <a href="#" class="social-icon">🐦</a>
+                        <a href="#" class="social-icon" title="Facebook">📘</a>
+                        <a href="#" class="social-icon" title="Instagram">📷</a>
+                        <a href="#" class="social-icon" title="Twitter">🐦</a>
+                        <a href="#" class="social-icon" title="TikTok">🎵</a>
                     </div>
                 </div>
             </div>
             <div class="footer-bottom">
                 <p>&copy; 2025 HQs Premium. Todos os direitos reservados. | Conteúdo exclusivo para maiores de 18 anos.</p>
-                <p class="footer-secure">🔒 Site seguro - Seus dados estão protegidos</p>
+                <p class="footer-secure">🔒 Site 100% seguro - Seus dados estão protegidos com criptografia SSL</p>
             </div>
         </div>
     </footer>
