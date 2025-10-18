@@ -6,7 +6,47 @@ This is a Brazilian Portuguese landing page for selling adult comic books (HQs) 
 
 ## Recent Changes
 
-**October 18, 2025** - Initial implementation completed
+**October 18, 2025 (v2.0)** - Major redesign with persuasion and nostalgia focus
+- ✅ Implemented complete persuasion framework with psychological triggers:
+  - Escassez: Sistema dinâmico de vagas limitadas (contador de 47 vagas diminuindo)
+  - Urgência: Contador regressivo de 15 minutos sincronizado em múltiplas seções
+  - Prova Social: 12.847 leitores, 97% de recomendação, badges verificados
+  - Autoridade: Selos de qualidade, garantia de 7 dias, pagamento seguro
+  - Reciprocidade: Seção de bônus com R$37 em extras grátis
+  - Garantia: Seção dedicada com política de reembolso incondicional
+- 🎨 Design nostálgico que remete à infância:
+  - Fonte "Bangers" para elementos vintage (logo, títulos especiais)
+  - Gradientes coloridos que lembram bancas de jornal antigas
+  - Emojis temáticos de livros e HQs (📚, 📖, 📕)
+  - Pattern sutil de quadrinhos no hero
+  - Stack animado de comic books na seção de valor
+- 📝 Copywriting otimizado para conversão:
+  - Headlines emocionais focadas em nostalgia e benefícios
+  - CTAs com verbos de ação fortes ("SIM! QUERO GARANTIR...")
+  - Linguagem que conecta com memórias da infância
+  - Comparação de preços (R$49,90 → R$10 = 80% OFF)
+- 🎯 Novas seções estratégicas:
+  - Barra de anúncio dourada fixa no topo com urgência
+  - Seção de proposição de valor com ilustração animada
+  - FAQ completa (6 perguntas) para eliminar objeções
+  - Seção de garantia com badge verde destacado
+  - Seção de bônus com 3 itens (arte, wallpapers, guia)
+  - Banner de escassez vermelho na seção de compra
+- 💻 Funcionalidades JavaScript avançadas:
+  - Contador regressivo sincronizado (15:00 decrescente)
+  - Atualização dinâmica de vagas a cada 8 segundos
+  - Animação de números com efeito crescente
+  - Exit intent com alerta ao tentar sair da página
+  - Ripple effect nos botões CTA
+  - FAQ accordion (preparado para expansão)
+- 🎨 Melhorias visuais:
+  - Badges animados nos cards de HQs (🔥 Mais Lida, ✨ Lançamento)
+  - Stats boxes com animação de contagem
+  - Trust badges row com ícones verificados
+  - Seção de depoimentos com badges "Compra Verificada"
+  - Footer expandido com redes sociais
+
+**October 18, 2025 (v1.0)** - Initial implementation completed
 - Created complete landing page with all sections (header, hero, comics, benefits, testimonials, purchase, footer)
 - Implemented dark premium design with purple (#8b5cf6) and gold (#fbbf24) accent colors
 - Added all JavaScript animations: fade-in on scroll, parallax hero background, stat counter animations, hover effects
