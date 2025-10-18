@@ -1,0 +1,47 @@
+Crie uma landing page completa em HTML, CSS e JavaScript inspirada no site https://caminhocoloridodafe.com.br, mas com um design totalmente diferente e moderno, mantendo o mesmo conceito de página de vendas.
+
+💡 Instruções detalhadas:
+
+1. **Tema geral:**
+   - Página de vendas para HQs digitais (PDFs) voltadas para adultos, mas sem conteúdo explícito.
+   - Estilo limpo, minimalista e profissional.
+   - Paleta de cores escura com detalhes em roxo e dourado (para dar um ar premium).
+   - Tipografia moderna (pode usar Google Fonts como "Poppins" ou "Inter").
+
+2. **Seções obrigatórias:**
+   - **Header fixo** com logotipo (texto ou imagem) e botão “Comprar Agora”.
+   - **Seção Hero** com:
+     - Título chamativo (ex: “As HQs Adultas Mais Favoritadas do Brasil”)
+     - Subtítulo curto
+     - Botão CTA grande “Acessar Agora por R$10”
+   - **Seção de Destaques / HQs**
+     - Cards de HQs com imagem de capa, nome, avaliação (estrelas), tags e botão “Ler Mais”.
+     - Use imagens fictícias (placeholders) e nomes simulados, como “Desejo Proibido”, “Noites em Segredo”, “Tentações Urbanas”.
+   - **Seção de benefícios**
+     - 3 ou 4 ícones com textos curtos (Ex: “Leitura em PDF”, “Acesso imediato”, “Atualizações semanais”, “Conteúdo exclusivo 18+”)
+   - **Depoimentos / Avaliações de leitores**
+     - 3 blocos com nome, estrela e comentário fictício.
+   - **Seção de compra**
+     - Destacar o preço (R$10,00)
+     - Botão “Quero Acessar Agora” (que redireciona para uma página de checkout externa — usar link placeholder #)
+   - **Rodapé**
+     - Contato fictício
+     - Termos de uso, política de privacidade, aviso 18+
+
+3. **Requisitos técnicos:**
+   - HTML5 sem frameworks (não usar React/Vue).
+   - CSS moderno (pode usar Flexbox e Grid).
+   - Adicione leve animação no scroll (fade-in).
+   - JavaScript para animações simples, scroll suave e destacar botões ao passar o mouse.
+   - O site deve ser 100% responsivo (mobile e desktop).
+
+4. **Extras visuais:**
+   - Fundo com leve gradiente escuro.
+   - Cards com hover animado (levemente ampliam).
+   - Botões com efeito de brilho ao passar o mouse.
+   - Adicione favicon fictício (pode ser um emoji “📖”).
+
+No final, mostre o código completo separado em:
+- index.html
+- style.css
+- script.js
