@@ -395,37 +395,6 @@ document.addEventListener('DOMContentLoaded', function() {
         purchaseObserver.observe(purchaseSection);
     }
 
-    let hasShownExitIntent = false;
-    let userInteracted = false;
-    
-    document.addEventListener('mousemove', function() {
-        if (!userInteracted) {
-            userInteracted = true;
-        }
-    });
-
-    document.addEventListener('mouseleave', function(e) {
-        if (e.clientY <= 0 && !hasShownExitIntent && userInteracted && window.scrollY > 500) {
-            hasShownExitIntent = true;
-            
-            const confirmed = confirm(
-                '⚠️ ESPERE! Você está prestes a perder esta oferta especial!\n\n' +
-                '🎁 Por apenas R$10 você ganha:\n' +
-                '   • 50+ HQs Exclusivas\n' +
-                '   • Atualizações semanais GRÁTIS\n' +
-                '   • R$37 em bônus\n' +
-                '   • Garantia de 7 dias\n\n' +
-                'Tem certeza que quer sair?'
-            );
-            
-            if (!confirmed) {
-                const purchaseSection = document.querySelector('#purchase');
-                if (purchaseSection) {
-                    purchaseSection.scrollIntoView({ behavior: 'smooth' });
-                }
-            }
-        }
-    });
 
     const valueItems = document.querySelectorAll('.value-item');
     valueItems.forEach((item, index) => {
