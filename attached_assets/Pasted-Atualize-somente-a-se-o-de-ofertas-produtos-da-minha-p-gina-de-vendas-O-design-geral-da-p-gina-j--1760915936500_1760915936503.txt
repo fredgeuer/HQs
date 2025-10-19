@@ -1,0 +1,97 @@
+Atualize somente a seção de ofertas/produtos da minha página de vendas.
+O design geral da página já está pronto, então não altere layout, cores, tipografia ou espaçamentos globais.
+Apenas substitua o conteúdo atual da seção de produtos/ofertas pelos novos itens abaixo, mantendo o mesmo estilo visual e estrutura.
+
+🧱 Título da Seção:
+Escolha sua coleção favorita de HQs digitais ou leve todas com desconto especial!
+
+💥 OFERTA PRINCIPAL (Pacote Completo):
+
+Nome: TODAS AS HQ´s
+
+Descrição: Acesso vitalício a todas as coleções de HQ´s digitais —São mais de 5.000 HQ´s!!
+Preço: R$ 29,90
+
+Imagem: todas-hqs.png
+
+Botão: “Levar todas agora”
+
+Destaque visual: Card maior, com leve brilho ou moldura dourada.
+
+📚 HQs Individuais (cards menores):
+
+Cada card deve exibir:
+
+Imagem da HQ original
+
+Nome da coleção
+
+Descrição curta
+
+Preço individual
+
+Botão “Comprar agora” 
+
+Cards:
+
+1️⃣ HQ´s Marvel – R$ 14,90
+Os heróis mais lendários do universo em aventuras épicas.
+Imagem: hqs-marvel.png
+
+2️⃣ HQ´s DC – R$ 13,90
+O universo sombrio e poderoso de Batman, Superman e Mulher-Maravilha.
+Imagem: hqs-dc.png
+
+3️⃣ HQ´s X-MEN – R$ 12,90
+A saga mutante mais amada das HQ´s.
+Imagem: hqs-xmen.png
+
+4️⃣ HQ´s Disney – R$ 11,90
+Clássicos atemporais de Mickey, Donald e Pateta.
+Imagem: hqs-disney.png
+
+5️⃣ HQ´s Scooby Doo – R$ 10,90
+Mistérios, humor e nostalgia em cada página.
+Imagem: hqs-scooby.png
+
+6️⃣ HQ´s Invencível – R$ 12,90
+A nova geração de heróis com histórias intensas e modernas.
+Imagem: hqs-invencivel.png
+
+7️⃣ HQ´s The Walking Dead – R$ 13,90
+Tensão e sobrevivência em um mundo pós-apocalíptico.
+Imagem: hqs-walkingdead.png
+
+8️⃣ HQ´s Recruta Zero – R$ 9,90
+Humor leve e nostálgico dos clássicos das tirinhas.
+Imagem: hqs-recrutazero.png
+
+9️⃣ HQ´s O Fantasma – R$ 10,90
+O primeiro herói mascarado em aventuras cheias de ação.
+Imagem: hqs-fantasma.png
+
+🔟 HQ´s Turma da Mônica – R$ 9,90
+O melhor da infância brasileira em histórias inesquecíveis.
+Imagem: hqs-monica.png
+
+1️⃣1️⃣ HQ´s Tom e Jerry – R$ 9,90
+Diversão e nostalgia com as perseguições mais famosas do mundo.
+Imagem: hqs-tomejerry.png
+
+1️⃣2️⃣ Mangás – R$ 14,90
+Coleção especial com mangás clássicos e modernos.
+Imagem: mangas.png
+
+
+⚙️ Instruções adicionais:
+
+Manter o mesmo design (cards, botões e responsividade).
+
+Apenas alterar o conteúdo e preços conforme listado.
+
+Os botões continuam sem funcionalidade, apenas href="#".
+
+Garantir que o grid permaneça responsivo e alinhado.
+
+🎯 Objetivo:
+Substituir a seção de produtos pela nova grade de ofertas de HQ´s, mantendo o visual atual e apenas atualizando os conteúdos conforme os dados acima.
