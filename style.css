@@ -1414,8 +1414,8 @@ section {
 
 .hq-item {
     flex: 0 0 auto;
-    width: 240px;
-    height: 340px;
+    width: 600px;
+    height: 900px;
     text-align: center;
     background: var(--card-bg);
     border-radius: 12px;
