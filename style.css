@@ -4,6 +4,11 @@
     box-sizing: border-box;
 }
 
+html, body {
+    overflow-x: hidden;
+    max-width: 100%;
+}
+
 :root {
     --primary-purple: #8b5cf6;
     --secondary-purple: #a78bfa;
@@ -31,6 +36,8 @@ body {
     color: var(--text-primary);
     line-height: 1.6;
     overflow-x: hidden;
+    position: relative;
+    width: 100%;
 }
 
 html {
@@ -87,6 +94,7 @@ html {
     bottom: 30px;
     left: 30px;
     z-index: 999;
+    max-width: calc(100vw - 60px);
 }
 
 .live-notification {
@@ -1964,6 +1972,50 @@ section {
     .hq-item img {
         height: 250px;
     }
+
+    /* Ajustes para elementos novos em tablet */
+    .best-deal-ribbon {
+        font-size: 0.75rem;
+        padding: 0.5rem 2.8rem;
+        top: 18px;
+        right: -32px;
+    }
+
+    .savings-badge {
+        font-size: 0.9rem;
+        padding: 0.6rem 1.1rem;
+    }
+
+    .featured-offer {
+        max-width: 95% !important;
+    }
+
+    .live-notification {
+        max-width: 400px;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .comics-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .urgency-badge-collection {
+        font-size: 0.85rem;
+        padding: 0.7rem 1.2rem;
+    }
+
+    .benefit-item {
+        font-size: 0.95rem;
+    }
+
+    .best-deal-ribbon {
+        font-size: 0.7rem;
+        padding: 0.4rem 2.5rem;
+        top: 15px;
+        right: -30px;
+    }
 }
 
 @media (max-width: 640px) {
@@ -2057,6 +2109,71 @@ section {
     .btn-hq {
         font-size: 0.85rem;
         padding: 8px 16px;
+    }
+
+    /* Ajustes responsivos para novos elementos */
+    .urgency-badge-collection {
+        font-size: 0.8rem;
+        padding: 0.6rem 1rem;
+        text-align: center;
+    }
+
+    .best-deal-ribbon {
+        font-size: 0.7rem;
+        padding: 0.4rem 2.5rem;
+        top: 15px;
+        right: -30px;
+    }
+
+    .savings-badge {
+        font-size: 0.85rem;
+        padding: 0.5rem 1rem;
+        top: 15px;
+        left: 15px;
+    }
+
+    .benefits-list {
+        gap: 0.6rem;
+    }
+
+    .benefit-item {
+        font-size: 0.9rem;
+        padding: 0.4rem;
+    }
+
+    .live-notification {
+        max-width: calc(100vw - 30px);
+        padding: 1rem 1.2rem;
+        font-size: 0.85rem;
+    }
+
+    .live-activity {
+        left: 15px;
+        bottom: 15px;
+        max-width: calc(100vw - 30px);
+    }
+
+    .notification-icon {
+        width: 35px;
+        height: 35px;
+        font-size: 1.4rem;
+    }
+
+    .featured-offer {
+        margin: 0 auto 2rem auto !important;
+    }
+
+    .comic-title {
+        font-size: 1.5rem !important;
+    }
+
+    .section-header {
+        text-align: center;
+    }
+
+    .urgency-badge-collection {
+        display: flex;
+        justify-content: center;
     }
 }
 
@@ -2179,4 +2296,33 @@ section {
 .notification-time {
     color: rgba(255, 255, 255, 0.8);
     font-size: 0.85rem;
+}
+
+/* Ajustes para o pacote completo */
+.featured-offer .comic-content > div[style*="display: flex"] {
+    flex-wrap: wrap;
+}
+
+@media (max-width: 640px) {
+    .featured-offer .comic-content > div[style*="display: flex"] {
+        flex-direction: column !important;
+        gap: 1rem !important;
+    }
+
+    .featured-offer .comic-content > div[style*="display: flex"] > div {
+        width: 100% !important;
+        text-align: center !important;
+    }
+
+    .featured-offer .comic-content > div[style*="display: flex"] > a {
+        width: 100% !important;
+    }
+
+    .featured-offer .comic-title {
+        font-size: 1.8rem !important;
+    }
+
+    .featured-offer .benefit-item {
+        font-size: 0.85rem;
+    }
 }
