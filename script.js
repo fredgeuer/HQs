@@ -431,9 +431,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
     const hqsCarousel = document.getElementById('hqsCarousel');
     if (hqsCarousel) {
+        const carouselItems = hqsCarousel.innerHTML;
+        hqsCarousel.innerHTML = carouselItems + carouselItems;
+        
         let scrollAmount = 0;
-        let scrollDirection = 1;
         let isHovering = false;
+        const scrollSpeed = 0.6;
 
         hqsCarousel.addEventListener('mouseenter', () => {
             isHovering = true;
@@ -445,12 +448,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
         function autoScrollCarousel() {
             if (!isHovering) {
-                scrollAmount += scrollDirection * 0.5;
-                hqsCarousel.scrollLeft = scrollAmount;
-
-                if (scrollAmount >= hqsCarousel.scrollWidth - hqsCarousel.clientWidth) {
+                scrollAmount += scrollSpeed;
+                
+                if (scrollAmount >= hqsCarousel.scrollWidth / 2) {
                     scrollAmount = 0;
                 }
+                
+                hqsCarousel.scrollLeft = scrollAmount;
             }
             requestAnimationFrame(autoScrollCarousel);
         }
