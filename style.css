@@ -1382,18 +1382,34 @@ section {
 
 .hqs-carousel {
     display: flex;
-    overflow-x: auto;
+    overflow: hidden;
     gap: 20px;
     padding: 30px 20px;
     margin-bottom: 3rem;
     position: relative;
     z-index: 1;
-    scroll-behavior: smooth;
+    mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+    -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
 }
 
 .hqs-carousel-track {
     display: flex;
     gap: 20px;
+    animation: scroll-carousel 40s linear infinite;
+    will-change: transform;
+}
+
+.hqs-carousel:hover .hqs-carousel-track {
+    animation-play-state: paused;
+}
+
+@keyframes scroll-carousel {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
 }
 
 .hq-item {
