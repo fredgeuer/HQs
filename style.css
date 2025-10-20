@@ -1512,11 +1512,235 @@ section {
     box-shadow: 0 10px 30px rgba(139, 92, 246, 0.6);
 }
 
+/* Novos estilos para seção showcase aprimorada */
+.nostalgia-badge-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+.nostalgia-badge {
+    background: linear-gradient(135deg, rgba(251, 191, 36, 0.2) 0%, rgba(139, 92, 246, 0.2) 100%);
+    border: 2px solid var(--gold);
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    animation: pulse-glow 2s ease-in-out infinite;
+}
+
+@keyframes pulse-glow {
+    0%, 100% { box-shadow: 0 0 20px rgba(251, 191, 36, 0.3); }
+    50% { box-shadow: 0 0 40px rgba(251, 191, 36, 0.6); }
+}
+
+.nostalgia-icon {
+    font-size: 1.3rem;
+}
+
+.vintage-title {
+    font-family: 'Bangers', cursive;
+    background: var(--gradient-vintage);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    letter-spacing: 1px;
+}
+
+.showcase-stats {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    margin-top: 2rem;
+}
+
+.showcase-stat-item {
+    text-align: center;
+}
+
+.showcase-stat-number {
+    font-size: 3rem;
+    font-weight: 900;
+    color: var(--gold);
+    font-family: 'Bangers', cursive;
+    line-height: 1;
+    margin-bottom: 0.5rem;
+}
+
+.showcase-stat-label {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    font-weight: 600;
+}
+
+.carousel-container {
+    background: rgba(139, 92, 246, 0.05);
+    border-radius: 20px;
+    padding: 2rem 1rem;
+    margin-bottom: 3rem;
+    border: 2px solid rgba(139, 92, 246, 0.2);
+}
+
+.carousel-label {
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 800;
+    color: var(--gold);
+    margin-bottom: 1.5rem;
+    letter-spacing: 2px;
+    animation: bounce-text 2s ease-in-out infinite;
+}
+
+@keyframes bounce-text {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
+}
+
+.hq-item {
+    position: relative;
+}
+
+.hq-badge {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    padding: 0.4rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 800;
+    z-index: 10;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    letter-spacing: 0.5px;
+}
+
+.vintage-badge {
+    background: linear-gradient(135deg, #ff6b6b 0%, #f59e0b 100%);
+    color: white;
+}
+
+.nostalgic-badge {
+    background: linear-gradient(135deg, #a78bfa 0%, #8b5cf6 100%);
+    color: white;
+}
+
+.hq-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.95) 0%, transparent 100%);
+    padding: 1rem;
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+    z-index: 5;
+}
+
+.hq-item:hover .hq-overlay {
+    transform: translateY(0);
+}
+
+.hq-title {
+    font-size: 0.9rem;
+    font-weight: 800;
+    color: white;
+    margin: 0 0 0.25rem 0;
+}
+
+.hq-desc {
+    font-size: 0.75rem;
+    color: var(--gold);
+    margin: 0;
+    font-weight: 600;
+}
+
+.showcase-cta-wrapper {
+    margin-top: 3rem;
+}
+
+.nostalgia-quote {
+    background: linear-gradient(135deg, rgba(139, 92, 246, 0.15) 0%, rgba(251, 191, 36, 0.1) 100%);
+    border-left: 5px solid var(--gold);
+    padding: 2rem;
+    border-radius: 15px;
+    margin-bottom: 3rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.nostalgia-quote::before {
+    content: '📚';
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 4rem;
+    opacity: 0.1;
+}
+
+.quote-icon {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.quote-text {
+    font-size: 1.2rem;
+    line-height: 1.7;
+    color: var(--text-primary);
+    font-style: italic;
+    text-align: center;
+    margin: 0;
+}
+
+.quote-text strong {
+    color: var(--gold);
+    font-weight: 800;
+}
+
 .showcase-cta {
     text-align: center;
     padding: 2rem;
     position: relative;
     z-index: 1;
+}
+
+.cta-highlight {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    background: linear-gradient(135deg, rgba(251, 191, 36, 0.2) 0%, rgba(139, 92, 246, 0.2) 100%);
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    margin-bottom: 2rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    border: 2px solid rgba(251, 191, 36, 0.5);
+}
+
+.cta-highlight strong {
+    color: var(--gold);
+    font-weight: 900;
+}
+
+.highlight-icon {
+    font-size: 1.5rem;
+    animation: sparkle 1.5s ease-in-out infinite;
+}
+
+@keyframes sparkle {
+    0%, 100% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.2); opacity: 0.7; }
+}
+
+.cta-guarantee {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    margin-top: 1.5rem;
+    font-weight: 600;
 }
 
 .showcase-text {
@@ -2324,5 +2548,48 @@ section {
 
     .featured-offer .benefit-item {
         font-size: 0.85rem;
+    }
+
+    /* Responsivo para showcase aprimorado */
+    .nostalgia-badge {
+        font-size: 0.9rem;
+        padding: 0.8rem 1.5rem;
+        flex-wrap: wrap;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .showcase-stats {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .showcase-stat-number {
+        font-size: 2.5rem;
+    }
+
+    .carousel-label {
+        font-size: 0.85rem;
+        letter-spacing: 1px;
+    }
+
+    .hq-badge {
+        font-size: 0.65rem;
+        padding: 0.3rem 0.6rem;
+    }
+
+    .nostalgia-quote {
+        padding: 1.5rem;
+    }
+
+    .quote-text {
+        font-size: 1rem;
+    }
+
+    .cta-highlight {
+        flex-direction: column;
+        gap: 0.5rem;
+        padding: 0.8rem 1.5rem;
+        font-size: 1rem;
     }
 }
