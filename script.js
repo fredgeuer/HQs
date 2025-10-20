@@ -224,19 +224,21 @@ document.addEventListener('DOMContentLoaded', function() {
             stats.forEach(stat => {
                 const target = parseFloat(stat.getAttribute('data-target'));
                 const isDecimal = target % 1 !== 0;
-                const suffix = stat.parentElement.querySelector('.stat-label').textContent.includes('Nota') ? '★' : 
-                               stat.parentElement.querySelector('.stat-label').textContent.includes('Recomendam') ? '%' : '';
+                const labelText = stat.parentElement.querySelector('.stat-label').textContent;
+                const suffix = labelText.includes('Nota') ? '★' : 
+                               labelText.includes('Recomendam') ? '%' : '';
+                const prefix = labelText.includes('HQs') ? '+' : '';
                 
                 if (isDecimal) {
-                    animateNumber(stat, 0, target, 2500, suffix, true);
+                    animateNumber(stat, 0, target, 2500, suffix, true, prefix);
                 } else {
-                    animateNumber(stat, 0, target, 2500, suffix, false);
+                    animateNumber(stat, 0, target, 2500, suffix, false, prefix);
                 }
             });
         }
     };
     
-    function animateNumber(element, start, end, duration, suffix = '', isDecimal = false) {
+    function animateNumber(element, start, end, duration, suffix = '', isDecimal = false, prefix = '') {
         const startTime = performance.now();
         
         function update(currentTime) {
@@ -248,10 +250,10 @@ document.addEventListener('DOMContentLoaded', function() {
             let current;
             if (isDecimal) {
                 current = start + (end - start) * easeOutQuart;
-                element.textContent = current.toFixed(1) + suffix;
+                element.textContent = prefix + current.toFixed(1) + suffix;
             } else {
                 current = Math.floor(start + (end - start) * easeOutQuart);
-                element.textContent = current.toLocaleString('pt-BR') + suffix;
+                element.textContent = prefix + current.toLocaleString('pt-BR') + suffix;
             }
             
             if (progress < 1) {
