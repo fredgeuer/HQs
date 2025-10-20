@@ -85,35 +85,88 @@ document.addEventListener('DOMContentLoaded', function() {
 
     setInterval(updateViewers, 12000);
 
+    const offers = [
+        { name: 'Pacote Completo - TODAS as HQs', price: 'R$ 29,90' },
+        { name: 'HQs Marvel', price: 'R$ 14,90' },
+        { name: 'Coleção Mangás', price: 'R$ 14,90' },
+        { name: 'HQs DC Comics', price: 'R$ 13,90' },
+        { name: 'HQs The Walking Dead', price: 'R$ 13,90' },
+        { name: 'HQs X-MEN', price: 'R$ 12,90' },
+        { name: 'HQs Disney', price: 'R$ 11,90' },
+        { name: 'HQs Scooby Doo', price: 'R$ 10,90' },
+        { name: 'HQs O Fantasma', price: 'R$ 10,90' },
+        { name: 'HQs Turma da Mônica', price: 'R$ 9,90' }
+    ];
+
     function showPurchaseNotification() {
         if (!liveNotification) return;
 
         const randomName = names[Math.floor(Math.random() * names.length)];
         const randomCity = cities[Math.floor(Math.random() * cities.length)];
         const randomMinutes = Math.floor(Math.random() * 15) + 1;
-        
-        const messages = [
-            `${randomName} de ${randomCity} acabou de garantir o acesso!`,
-            `${randomName} de ${randomCity} comprou há ${randomMinutes} min`,
-            `${randomName} de ${randomCity} garantiu a vaga agora`,
-        ];
-        
-        const randomMessage = messages[Math.floor(Math.random() * messages.length)];
+        const randomOffer = offers[Math.floor(Math.random() * offers.length)];
         
         const notificationText = document.getElementById('notification-text');
         if (notificationText) {
-            notificationText.textContent = randomMessage;
+            notificationText.innerHTML = `
+                <div style="display: flex; flex-direction: column; gap: 0.3rem;">
+                    <div><strong>${randomName}</strong> de ${randomCity}</div>
+                    <div>Comprou <span class="notification-offer">${randomOffer.name}</span></div>
+                    <div class="notification-time">há ${randomMinutes} min atrás</div>
+                </div>
+            `;
         }
         
         liveNotification.classList.add('show');
         
         setTimeout(() => {
             liveNotification.classList.remove('show');
-        }, 5000);
+        }, 6000);
     }
 
     setTimeout(showPurchaseNotification, 8000);
-    setInterval(showPurchaseNotification, 25000);
+    setInterval(showPurchaseNotification, 20000);
+
+    let collectionViewers = 143;
+    let collectionSpots = 23;
+
+    function updateCollectionViewers() {
+        const change = Math.random() < 0.5 ? 1 : -1;
+        const variation = Math.floor(Math.random() * 7) + 1;
+        collectionViewers = Math.max(120, Math.min(180, collectionViewers + (change * variation)));
+        
+        const viewersElement = document.getElementById('collection-viewers');
+        if (viewersElement) {
+            viewersElement.textContent = collectionViewers;
+            viewersElement.style.transition = 'all 0.3s ease';
+            viewersElement.style.transform = 'scale(1.2)';
+            viewersElement.style.color = '#fbbf24';
+            setTimeout(() => {
+                viewersElement.style.transform = 'scale(1)';
+                viewersElement.style.color = '';
+            }, 300);
+        }
+    }
+
+    function updateCollectionSpots() {
+        const decrease = Math.random() < 0.15;
+        if (decrease && collectionSpots > 8) {
+            collectionSpots--;
+            const spotsElement = document.getElementById('collection-spots');
+            if (spotsElement) {
+                spotsElement.textContent = collectionSpots;
+                spotsElement.style.transition = 'all 0.4s ease';
+                spotsElement.style.transform = 'scale(1.3)';
+                spotsElement.style.color = collectionSpots < 15 ? '#ef4444' : '#fbbf24';
+                setTimeout(() => {
+                    spotsElement.style.transform = 'scale(1)';
+                }, 400);
+            }
+        }
+    }
+
+    setInterval(updateCollectionViewers, 10000);
+    setInterval(updateCollectionSpots, 8000);
 
     window.addEventListener('scroll', function() {
         if (window.scrollY > 100) {
