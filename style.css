@@ -772,10 +772,11 @@ section {
 .comic-card {
     background: var(--card-bg);
     border-radius: 20px;
-    overflow: hidden;
     transition: all 0.4s ease;
     border: 2px solid rgba(139, 92, 246, 0.1);
     position: relative;
+    display: flex;
+    flex-direction: column;
 }
 
 .comic-card:hover {
@@ -788,6 +789,7 @@ section {
     position: relative;
     height: 280px;
     overflow: hidden;
+    border-radius: 20px 20px 0 0;
 }
 
 .comic-carousel-container {
