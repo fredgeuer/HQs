@@ -2059,3 +2059,124 @@ section {
         padding: 8px 16px;
     }
 }
+
+/* Estilos persuasivos para seção de coleções */
+.urgency-badge-collection {
+    background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border-radius: 50px;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.95rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 4px 15px rgba(239, 68, 68, 0.4);
+    animation: pulse-badge 2s ease-in-out infinite;
+}
+
+@keyframes pulse-badge {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+}
+
+.best-deal-ribbon {
+    position: absolute;
+    top: 20px;
+    right: -35px;
+    background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+    color: white;
+    padding: 0.6rem 3rem;
+    font-weight: 800;
+    font-size: 0.9rem;
+    transform: rotate(45deg);
+    box-shadow: 0 4px 15px rgba(239, 68, 68, 0.5);
+    z-index: 10;
+    letter-spacing: 1px;
+}
+
+.savings-badge {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+    color: white;
+    padding: 0.7rem 1.2rem;
+    border-radius: 50px;
+    font-weight: 800;
+    font-size: 1rem;
+    box-shadow: 0 4px 15px rgba(16, 185, 129, 0.5);
+    z-index: 10;
+    animation: pulse-savings 1.5s ease-in-out infinite;
+}
+
+@keyframes pulse-savings {
+    0%, 100% { transform: scale(1); box-shadow: 0 4px 15px rgba(16, 185, 129, 0.5); }
+    50% { transform: scale(1.1); box-shadow: 0 6px 25px rgba(16, 185, 129, 0.7); }
+}
+
+.benefits-list {
+    display: grid;
+    gap: 0.8rem;
+}
+
+.benefit-item {
+    font-size: 1.05rem;
+    color: #e2e8f0;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem;
+    background: rgba(139, 92, 246, 0.1);
+    border-radius: 8px;
+    border-left: 3px solid var(--primary-purple);
+}
+
+.benefit-item strong {
+    color: var(--gold);
+}
+
+/* Melhorias nas notificações */
+.live-notification {
+    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+    color: white;
+    padding: 1.2rem 1.8rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 40px rgba(16, 185, 129, 0.5);
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 1rem;
+    font-weight: 600;
+    transform: translateX(-500px);
+    transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    max-width: 450px;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.live-notification.show {
+    transform: translateX(0);
+}
+
+.notification-icon {
+    font-size: 1.8rem;
+    background: rgba(255, 255, 255, 0.2);
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.notification-offer {
+    color: #fbbf24;
+    font-weight: 700;
+}
+
+.notification-time {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.85rem;
+}
