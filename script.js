@@ -429,6 +429,15 @@ document.addEventListener('DOMContentLoaded', function() {
         }, 3000);
     }
 
+    const carouselTrack = document.getElementById('carouselTrack');
+    if (carouselTrack) {
+        const items = Array.from(carouselTrack.children);
+        items.forEach(item => {
+            const clone = item.cloneNode(true);
+            carouselTrack.appendChild(clone);
+        });
+    }
+
     console.log('🎨 HQs Premium - Landing Page ULTRA PREMIUM carregada!');
     console.log('✨ Versão 2.0 - Persuasão Máxima Ativada');
     console.log('⏰ Contador regressivo: ATIVO');
