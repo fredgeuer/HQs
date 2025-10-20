@@ -429,38 +429,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }, 3000);
     }
 
-    const hqsCarousel = document.getElementById('hqsCarousel');
-    if (hqsCarousel) {
-        const carouselItems = hqsCarousel.innerHTML;
-        hqsCarousel.innerHTML = carouselItems + carouselItems;
-        
-        let scrollAmount = 0;
-        let isHovering = false;
-        const scrollSpeed = 0.6;
-
-        hqsCarousel.addEventListener('mouseenter', () => {
-            isHovering = true;
-        });
-
-        hqsCarousel.addEventListener('mouseleave', () => {
-            isHovering = false;
-        });
-
-        function autoScrollCarousel() {
-            if (!isHovering) {
-                scrollAmount += scrollSpeed;
-                
-                if (scrollAmount >= hqsCarousel.scrollWidth / 2) {
-                    scrollAmount = 0;
-                }
-                
-                hqsCarousel.scrollLeft = scrollAmount;
-            }
-            requestAnimationFrame(autoScrollCarousel);
-        }
-
-        autoScrollCarousel();
-    }
 
     console.log('🎨 HQs Premium - Landing Page ULTRA PREMIUM carregada!');
     console.log('✨ Versão 2.0 - Persuasão Máxima Ativada');
