@@ -1382,40 +1382,24 @@ section {
 
 .hqs-carousel {
     display: flex;
-    overflow: hidden;
-    gap: 30px;
+    overflow-x: auto;
+    gap: 20px;
     padding: 30px 20px;
     margin-bottom: 3rem;
     position: relative;
     z-index: 1;
-    mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
-    -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+    scroll-behavior: smooth;
 }
 
 .hqs-carousel-track {
     display: flex;
-    gap: 30px;
-    animation: scroll-carousel 40s linear infinite;
-    will-change: transform;
-}
-
-.hqs-carousel:hover .hqs-carousel-track {
-    animation-play-state: paused;
-}
-
-@keyframes scroll-carousel {
-    0% {
-        transform: translateX(0);
-    }
-    100% {
-        transform: translateX(-50%);
-    }
+    gap: 20px;
 }
 
 .hq-item {
     flex: 0 0 auto;
-    width: 600px;
-    height: 900px;
+    width: 130px;
+    height: 195px;
     text-align: center;
     background: var(--card-bg);
     border-radius: 12px;
