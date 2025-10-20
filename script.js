@@ -429,6 +429,35 @@ document.addEventListener('DOMContentLoaded', function() {
         }, 3000);
     }
 
+    const hqsCarousel = document.getElementById('hqsCarousel');
+    if (hqsCarousel) {
+        let scrollAmount = 0;
+        let scrollDirection = 1;
+        let isHovering = false;
+
+        hqsCarousel.addEventListener('mouseenter', () => {
+            isHovering = true;
+        });
+
+        hqsCarousel.addEventListener('mouseleave', () => {
+            isHovering = false;
+        });
+
+        function autoScrollCarousel() {
+            if (!isHovering) {
+                scrollAmount += scrollDirection * 0.5;
+                hqsCarousel.scrollLeft = scrollAmount;
+
+                if (scrollAmount >= hqsCarousel.scrollWidth - hqsCarousel.clientWidth) {
+                    scrollAmount = 0;
+                }
+            }
+            requestAnimationFrame(autoScrollCarousel);
+        }
+
+        autoScrollCarousel();
+    }
+
     console.log('🎨 HQs Premium - Landing Page ULTRA PREMIUM carregada!');
     console.log('✨ Versão 2.0 - Persuasão Máxima Ativada');
     console.log('⏰ Contador regressivo: ATIVO');
@@ -437,4 +466,5 @@ document.addEventListener('DOMContentLoaded', function() {
     console.log('🔔 Notificações de compra em tempo real: ATIVAS');
     console.log('🎯 Persuasão otimizada para conversão MÁXIMA');
     console.log(`📈 Números atualizados: 22.847 leitores | Nota 4.8★`);
+    console.log('🎞️ Auto-scroll do carrossel de HQs: ATIVO');
 });
