@@ -230,6 +230,28 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
+    const initComicCarousels = () => {
+        const carouselContainers = document.querySelectorAll('.comic-carousel-container');
+        
+        carouselContainers.forEach(container => {
+            const track = container.querySelector('.comic-carousel-track');
+            const images = track.querySelectorAll('.comic-carousel-img');
+            
+            if (images.length <= 1) return;
+            
+            let currentIndex = 0;
+            
+            const rotateImages = () => {
+                currentIndex = (currentIndex + 1) % images.length;
+                track.style.transform = `translateX(-${currentIndex * 100}%)`;
+            };
+            
+            setInterval(rotateImages, 3000);
+        });
+    };
+    
+    initComicCarousels();
+
     const benefitCards = document.querySelectorAll('.benefit-card');
     benefitCards.forEach((card, index) => {
         card.style.animationDelay = `${index * 0.08}s`;
